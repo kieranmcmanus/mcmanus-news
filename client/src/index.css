@@ -71,3 +71,36 @@ button {
   justify-content: space-between;
   margin: 10px;
 }
+
+@media screen and (max-width: 1000px) {
+  .article {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .article {
+    width: 80%;
+  }
+  #topstories {
+    padding: 10px;
+    font-size: 16px;
+  }
+  button {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 630px) {
+  button {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  #title {
+    font-size: 24px;
+  }
+}
