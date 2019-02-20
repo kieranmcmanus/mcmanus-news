@@ -29,8 +29,8 @@ class App extends Component {
       .catch(error => alert(error.message));
   }
 
-  updateCategory = test => {
-    this.setState({ category: test }, () => {
+  updateCategory = category => {
+    this.setState({ category: category }, () => {
       this.fetchCategory();
     });
   }
