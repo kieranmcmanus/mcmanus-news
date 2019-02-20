@@ -36,6 +36,78 @@ app.get('/topstories', (req, res, next) => {
   }
 );
 
+app.get('/business', (req, res, next) => {
+    request({
+      url: `https://newsapi.org/v2/top-headlines?country=us&category=business`,
+      headers: { Authorization: `Bearer ${API_KEY}` }
+    }, (error, response, body) => {
+      if (error) return next(error);
+
+      res.json(JSON.parse(body));
+    });
+  }
+);
+
+app.get('/entertainment', (req, res, next) => {
+    request({
+      url: `https://newsapi.org/v2/top-headlines?country=us&category=entertainment`,
+      headers: { Authorization: `Bearer ${API_KEY}` }
+    }, (error, response, body) => {
+      if (error) return next(error);
+
+      res.json(JSON.parse(body));
+    });
+  }
+);
+
+app.get('/health', (req, res, next) => {
+    request({
+      url: `https://newsapi.org/v2/top-headlines?country=us&category=health`,
+      headers: { Authorization: `Bearer ${API_KEY}` }
+    }, (error, response, body) => {
+      if (error) return next(error);
+
+      res.json(JSON.parse(body));
+    });
+  }
+);
+
+app.get('/science', (req, res, next) => {
+    request({
+      url: `https://newsapi.org/v2/top-headlines?country=us&category=science`,
+      headers: { Authorization: `Bearer ${API_KEY}` }
+    }, (error, response, body) => {
+      if (error) return next(error);
+
+      res.json(JSON.parse(body));
+    });
+  }
+);
+
+app.get('/sports', (req, res, next) => {
+    request({
+      url: `https://newsapi.org/v2/top-headlines?country=us&category=sports`,
+      headers: { Authorization: `Bearer ${API_KEY}` }
+    }, (error, response, body) => {
+      if (error) return next(error);
+
+      res.json(JSON.parse(body));
+    });
+  }
+);
+
+app.get('/technology', (req, res, next) => {
+    request({
+      url: `https://newsapi.org/v2/top-headlines?country=us&category=technology`,
+      headers: { Authorization: `Bearer ${API_KEY}` }
+    }, (error, response, body) => {
+      if (error) return next(error);
+
+      res.json(JSON.parse(body));
+    });
+  }
+);
+
 app.use((err, req, res, next) => {
   res.status(500).json({ type: 'error', message: err.message });
 });
